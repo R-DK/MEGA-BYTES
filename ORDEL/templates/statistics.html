@@ -1,0 +1,76 @@
+<div>Premier Customer</div>
+<div>Level of the User</div>
+<div>
+  <canvas id="myChart1"  style="height:40vh; width:80vw"></canvas>
+</div>
+<div>Type of Garbage Vs Weight</div>
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+<div>Your Eco Indicator</div>
+<div>
+  <label for="file">Eco Indicator progress:</label>
+  <progress id="file" value="80" max="100"> 80% </progress>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+
+const data1 = {
+  //labels: ['% Completed','Yet to Complete'],
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: [80,20],
+      backgroundColor: [
+      'rgb(0, 175, 0)',
+      'rgb(0, 235, 0)'
+    ],
+    hoverOffset: 5
+    }
+  ]
+};
+const config1 = {
+  type: 'doughnut',
+  data: data1,
+  options: {}
+};
+</script>
+<script>
+  const myChart1 = new Chart(
+    document.getElementById('myChart1'),
+    config1
+  );
+</script>
+<script>
+  const labels = [
+    'Plastic',
+    'Cardboard',
+    'PolyBags',
+    'News Paper',
+    'Magazine',
+    'Metal Waste',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      //label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20],
+    }]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  };
+</script>
+<script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
+
