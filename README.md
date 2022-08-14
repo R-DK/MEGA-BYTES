@@ -1,4 +1,4 @@
-# Project-ORDEL
+# MEGA BYTES
 
 The repo is about Garbage Management Application. 
 
